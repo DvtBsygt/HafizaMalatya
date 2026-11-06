@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hafıza Malatya</title>
+<meta name="description" content="Malatya'nın hafızasını toplayan, doğrulayan ve herkese açan kent belleği platformu.">
+<style>
+:root{--teal:#1f4e5f;--koyu:#12303c;--amber:#e09f3e;--krem:#faf6ee;--kum:#f1e8d6;--ink:#1d2a2f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--krem);color:var(--ink);line-height:1.7}
+a{color:var(--teal)}
+.sans{font-family:"Segoe UI",Inter,Arial,sans-serif}
+/* üst menü */
+header.top{position:sticky;top:0;z-index:20;background:rgba(18,48,60,.96);backdrop-filter:blur(6px)}
+.bar{max-width:72rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.2rem;gap:1rem;flex-wrap:wrap}
+.logo{font:800 1.15rem "Segoe UI",Arial,sans-serif;letter-spacing:.12em;color:#fff;text-decoration:none}
+.logo b{color:var(--amber)}
+nav a{font:600 .88rem "Segoe UI",Arial,sans-serif;color:#f4e2c0;text-decoration:none;margin-left:1.2rem}
+nav a:hover{color:#fff}
+/* kahraman */
+.hero{position:relative;color:#fff;min-height:78vh;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(18,48,60,.55),rgba(18,48,60,.92)),url(./arslantepe.jpg) center/cover}
+.hero .in{max-width:72rem;margin:0 auto;padding:6rem 1.2rem 5rem;width:100%}
+.hero h1{font:900 clamp(2.6rem,7vw,5rem)/1.02 "Segoe UI",Arial,sans-serif;margin:0;letter-spacing:-.01em}
+.hero h1 span{color:var(--amber)}
+.hero p{max-width:38rem;font-size:1.25rem;margin:1.2rem 0 1.8rem;color:#e8eef0}
+.rozet{display:inline-block;font:700 .8rem "Segoe UI",Arial,sans-serif;letter-spacing:.3em;color:var(--amber);border:2px solid var(--amber);padding:.4rem .9rem;border-radius:4px;margin-bottom:1.4rem}
+.btn{display:inline-block;background:var(--amber);color:#1a1a1a;font:700 .95rem "Segoe UI",Arial,sans-serif;padding:.8rem 1.4rem;border-radius:6px;text-decoration:none;margin-right:.6rem}
+.btn.l{background:transparent;color:#fff;border:2px solid #fff}
+/* kemer şeridi */
+.kemer{display:block;width:100%;height:46px;background:var(--koyu)}
+section{padding:4.2rem 1.2rem}
+.w{max-width:72rem;margin:0 auto}
+h2{font:800 clamp(1.7rem,3.5vw,2.4rem)/1.15 "Segoe UI",Arial,sans-serif;color:var(--teal);margin:0 0 .5rem}
+.alt{font:600 .85rem "Segoe UI",Arial,sans-serif;letter-spacing:.25em;color:#a5741f;text-transform:uppercase;margin-bottom:.6rem}
+.lead{max-width:44rem;font-size:1.15rem}
+.koyu{background:var(--koyu);color:#e8eef0}.koyu h2{color:#fff}.koyu .alt{color:var(--amber)}
+.kum{background:var(--kum)}
+/* kartlar */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.2rem;margin-top:2rem}
+.kart{background:#fff;border-top:5px solid var(--amber);padding:1.4rem 1.3rem;box-shadow:0 2px 10px rgba(0,0,0,.07);display:flex;flex-direction:column}
+.kart h3{font:800 1.2rem "Segoe UI",Arial,sans-serif;color:var(--teal);margin:.2rem 0 .5rem}
+.kart p{margin:0 0 .8rem;font-size:1rem}
+.kart .no{font:900 2.2rem "Segoe UI",Arial,sans-serif;color:var(--amber);line-height:1}
+.yk{margin-top:auto;font:700 .72rem "Segoe UI",Arial,sans-serif;letter-spacing:.22em;color:#8a6a2a}
+/* zaman çizelgesi */
+.zc{position:relative;margin:2.5rem 0 0;padding-left:2rem;border-left:4px solid var(--amber)}
+.zc div{position:relative;margin-bottom:1.6rem}
+.zc div:before{content:"";position:absolute;left:-2.55rem;top:.35rem;width:16px;height:16px;border-radius:50%;background:var(--amber);border:4px solid var(--koyu)}
+.zc b{font:900 1.3rem "Segoe UI",Arial,sans-serif;color:var(--amber);display:block}
+.zc span{color:#d9e4e8}
+.kaynak{font:600 .85rem "Segoe UI",Arial,sans-serif;color:#9fb8c2;margin-top:1rem}
+/* iki sütun */
+.iki{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.iki img{width:100%;border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+@media(max-width:760px){.iki{grid-template-columns:1fr}nav a{margin-left:.8rem}.hero{min-height:70vh}}
+.ilke{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem;margin-top:1.6rem}
+.ilke div{background:#fff;padding:1rem 1.1rem;border-left:5px solid var(--teal);font-size:.98rem}
+.ilke b{display:block;font-family:"Segoe UI",Arial,sans-serif;color:var(--teal);margin-bottom:.2rem}
+.ata{font:600 .78rem "Segoe UI",Arial,sans-serif;color:#667;margin-top:.5rem}
+footer{background:var(--koyu);color:#b9ccd3;padding:2.5rem 1.2rem;font:.92rem "Segoe UI",Arial,sans-serif}
+footer a{color:#f4e2c0}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.5rem;max-width:72rem;margin:0 auto}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+  <a class="logo" href="#">HAFIZA <b>MALATYA</b></a>
+  <nav><a href="#hakkinda">Hakkında</a><a href="#neler">Neler olacak</a><a href="#zaman">Zaman çizelgesi</a><a href="#ilkeler">İlkeler</a><a href="#katki">Katkı</a><a href="#iletisim">İletişim</a></nav>
+</div></header>
+
+<div class="hero"><div class="in">
+  <span class="rozet">YAKINDA</span>
+  <h1>Malatya'nın<br>hafızası <span>kaybolmasın.</span></h1>
+  <p>Kentin tarihini, yapılarını, ürünlerini ve insanlarını kaynaklı biçimde toplayan, doğrulayan ve herkese açan kent belleği platformu.</p>
+  <a class="btn" href="#neler">Neler olacak</a><a class="btn l" href="#katki">Katkıda bulun</a>
+</div></div>
+<svg class="kemer" viewBox="0 0 1400 46" preserveAspectRatio="none" fill="none" stroke="#e09f3e" stroke-width="2.5"><path d="M10 46V24A28 28 0 0 1 66 24V46M76 46V24A28 28 0 0 1 132 24V46M142 46V24A28 28 0 0 1 198 24V46M208 46V24A28 28 0 0 1 264 24V46M274 46V24A28 28 0 0 1 330 24V46M340 46V24A28 28 0 0 1 396 24V46M406 46V24A28 28 0 0 1 462 24V46M472 46V24A28 28 0 0 1 528 24V46M538 46V24A28 28 0 0 1 594 24V46M604 46V24A28 28 0 0 1 660 24V46M670 46V24A28 28 0 0 1 726 24V46M736 46V24A28 28 0 0 1 792 24V46M802 46V24A28 28 0 0 1 858 24V46M868 46V24A28 28 0 0 1 924 24V46M934 46V24A28 28 0 0 1 990 24V46M1000 46V24A28 28 0 0 1 1056 24V46M1066 46V24A28 28 0 0 1 1122 24V46M1132 46V24A28 28 0 0 1 1188 24V46M1198 46V24A28 28 0 0 1 1254 24V46M1264 46V24A28 28 0 0 1 1320 24V46M1330 46V24A28 28 0 0 1 1386 24V46"/></svg>
+
+<section id="hakkinda"><div class="w iki">
+  <div>
+    <div class="alt">Hakkında</div>
+    <h2>Çok katmanlı bir kent, tek bir hafıza.</h2>
+    <p class="lead">Malatya'da yerleşim Arslantepe'de başlar; sonraki çağlarda Hitit, Roma-Bizans, Selçuklu ve Osmanlı dönemlerinden geçer. 6 Şubat 2023 depremlerinde çarşı, sokaklar ve mahalleler ağır hasar gördü.</p>
+    <p class="lead">Hafıza Malatya, bu mekânların ve yaşamın hatırasını kaybolmadan derlemek için kurulan, bağımsız bir kent belleği çalışmasıdır. Yazılar, envanter, sözlü tarih, yayın ve etkinliklerle büyür.</p>
+  </div>
+  <div><img src="./carsi.jpg" alt="Malatya çarşı bölgesi"><div class="ata">Fotoğraf: Dosseman, CC BY-SA 4.0, Wikimedia Commons</div></div>
+</div></section>
+
+<section id="neler" class="kum"><div class="w">
+  <div class="alt">Neler olacak</div>
+  <h2>Platformun altı kolu</h2>
+  <p class="lead">Bunlar planlanan bölümlerdir; hazır oldukça burada açılacak.</p>
+  <div class="grid">
+    <div class="kart"><div class="no">01</div><h3>Hafıza Yazıları</h3><p>Kentin tarihi, yapıları, ürünleri ve insanları üzerine kaynaklı yazılar. Etiketlerle taranabilir: Tarih, Çarşı, Ticaret, Kayısı, Mahalle.</p><div class="yk">YAKINDA</div></div>
+    <div class="kart"><div class="no">02</div><h3>Han, Çarşı ve Yapı Envanteri</h3><p>Han, çarşı, cami, hamam ve evler; her biri için kısa künye, öncesi ve sonrası, kaynakçası.</p><div class="yk">YAKINDA</div></div>
+    <div class="kart"><div class="no">03</div><h3>Malatya Bibliyografyası</h3><p>Malatya hakkında yazılmış kitap, makale ve belgelerin aranabilir listesi.</p><div class="yk">YAKINDA</div></div>
+    <div class="kart"><div class="no">04</div><h3>Sözlü Tarih</h3><p>Kent sakinleriyle izinli söyleşiler: çarşı esnafı, mahalle sakinleri, bağ ve bahçe ustaları.</p><div class="yk">YAKINDA</div></div>
+    <div class="kart"><div class="no">05</div><h3>Yayınlar ve Sergi</h3><p>Ajanda-kitap, anı kitabı ve gezici sergi. PDF olarak herkese açık.</p><div class="yk">YAKINDA</div></div>
+    <div class="kart"><div class="no">06</div><h3>Atölye ve Etkinlikler</h3><p>Mahalle yazı atölyeleri, gençlerin sorduğu, yaşlıların anlattığı buluşmalar. Haber ve duyurular burada.</p><div class="yk">YAKINDA</div></div>
+  </div>
+</div></section>
+
+<section id="zaman" class="koyu"><div class="w iki">
+  <div>
+    <div class="alt">Zaman çizelgesi</div>
+    <h2>Katman katman Malatya</h2>
+    <div class="zc">
+      <div><b>Arslantepe</b><span>Erken kent yerleşimi; 2021'de UNESCO Dünya Miras Listesi'nde.</span></div>
+      <div><b>Hitit ve Asur dönemleri</b><span>Kentin ilk çağ katmanları.</span></div>
+      <div><b>Roma ve Bizans dönemleri</b><span>Kentin Roma ve Bizans katmanları.</span></div>
+      <div><b>1224</b><span>Ulucami, Selçuklu dönemi.</span></div>
+      <div><b>1516</b><span>Kalıcı Osmanlı idaresi.</span></div>
+      <div><b>6 Şubat 2023</b><span>Depremlerde çarşı, sokaklar ve mahalleler ağır hasar gördü; hatıralar derlenmeyi bekliyor.</span></div>
+    </div>
+    <div class="kaynak">Kaynak: TDV İslâm Ansiklopedisi, "Malatya" maddesi.</div>
+  </div>
+  <div><img src="./ulucami.jpg" alt="Battalgazi Ulu Camii"><div class="ata" style="color:#9fb8c2">Fotoğraf: Dosseman, CC BY-SA 4.0, Wikimedia Commons</div></div>
+</div></section>
+
+<section id="ilkeler"><div class="w">
+  <div class="alt">İlkelerimiz</div>
+  <h2>Güvenilir hafıza için dört söz</h2>
+  <div class="ilke">
+    <div><b>Her bilgi kaynaklıdır</b>Doğrulanamayan bilgi yayımlanmaz; kaynak her yazının altındadır.</div>
+    <div><b>Her kayıt izinlidir</b>Söyleşi, fotoğraf ve belge sahibinin yazılı izniyle yayımlanır.</div>
+    <div><b>Herkese açıktır</b>Yazılar ve yayınlar ücretsiz okunur, kaynakları gösterilerek kullanılır.</div>
+    <div><b>Gerçek insan sesi</b>Sözlü tarih kayıtları gerçek anlatıcılarla yapılır; yapay zekâ sesi kullanılmaz.</div>
+  </div>
+</div></section>
+
+<section id="katki" class="kum"><div class="w iki">
+  <div>
+    <div class="alt">Katkı</div>
+    <h2>Bir hatıranız mı var?</h2>
+    <p class="lead">Eski bir fotoğraf, bir hatıra, bir han ya da çarşı hikâyesi, kaynak önerisi: hepsi hafızanın parçası. Bize yazın; hiçbir kayıt izniniz olmadan yayımlanmaz.</p>
+    <p><a class="btn" style="background:var(--teal);color:#fff" href="mailto:hafizamalatya44@gmail.com">hafizamalatya44@gmail.com</a></p>
+  </div>
+  <div><img src="./han.jpg" alt="Silahtar Mustafa Paşa Hanı, Battalgazi"><div class="ata">Fotoğraf: Dosseman, CC BY-SA 4.0, Wikimedia Commons</div></div>
+</div></section>
+
+<section id="iletisim"><div class="w">
+  <div class="alt">İletişim</div>
+  <h2>Bizi takip edin</h2>
+  <p class="lead">Instagram, X, Facebook ve YouTube'da <b>@hafizamalatya</b>.</p>
+  <p><a href="https://www.instagram.com/hafizamalatya">Instagram</a> · <a href="https://x.com/hafizamalatya">X</a> · <a href="https://www.facebook.com/hafizamalatya/">Facebook</a> · <a href="https://www.youtube.com/@hafizamalatya">YouTube</a> · <a href="mailto:hafizamalatya44@gmail.com">E-posta</a></p>
+</div></section>
+
+<footer><div class="cols">
+  <div><b style="color:#fff">HAFIZA MALATYA</b><br>Malatya'nın hafızasını toplayan, doğrulayan ve herkese açan kent belleği platformu.</div>
+  <div><b style="color:#fff">Bağlantılar</b><br><a href="#hakkinda">Hakkında</a><br><a href="#neler">Neler olacak</a><br><a href="#katki">Katkı</a></div>
+  <div><b style="color:#fff">Görseller</b><br>Wikimedia Commons: Dosseman, Zeynel Cebeci, PWVDG (CC BY-SA)<br>© 2026 Hafıza Malatya</div>
+</div></footer>
+</body>
+</html>
